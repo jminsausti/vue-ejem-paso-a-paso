@@ -1,10 +1,17 @@
+<template>
+  <h1>Contador Options</h1>
+  <!-- <CounterOption /> -->
+  <CounterComposition></CounterComposition>
+</template>
+
+
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+  //import PostContainer from './components/PostContainer.vue';
+  //import CounterOption from './components/CounterOption.vue';
+  import CounterComposition from './components/CounterComposition.vue';
+
 </script>
 
-<template>
-  <h1>KAIXO WORLD</h1>
-</template>
 
 <style scoped>
 h1{
