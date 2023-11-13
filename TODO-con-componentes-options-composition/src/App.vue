@@ -8,7 +8,9 @@
   <!-- <EventosOption></EventosOption> -->
   <!-- <EventosComposition></EventosComposition> -->
   <!-- <PropiedadesComputadasOption></PropiedadesComputadasOption> -->
-  <PropiedadesComputadasComposition></PropiedadesComputadasComposition>
+  <!-- <PropiedadesComputadasComposition></PropiedadesComputadasComposition> -->
+  <!-- <DataBindClassesOption></DataBindClassesOption> -->
+  <DataBindClassesComposition></DataBindClassesComposition>
 </template>
 
 
@@ -24,7 +26,10 @@
   // import EventosComposition from './components/4-Eventos/EventosComposition.vue';
 //6-Propiedades Computadas
   // import PropiedadesComputadasOption from './components/6-Propiedades-Computadas/PropiedadesComputadasOption.vue';
-  import PropiedadesComputadasComposition from './components/6-Propiedades-Computadas/PropiedadesComputadasComposition.vue';
+  // import PropiedadesComputadasComposition from './components/6-Propiedades-Computadas/PropiedadesComputadasComposition.vue';
+//9-data-binding-atributos-clases
+  // import DataBindClassesOption from './components/9-data-binding-atributos-clases/DataBindClassesOption.vue';
+  import DataBindClassesComposition from './components/9-data-binding-atributos-clases/DataBindClassesComposition.vue';
 </script>
 
 
