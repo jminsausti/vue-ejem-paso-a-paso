@@ -6,7 +6,9 @@
   <!-- <ListasOption></ListasOption> -->
   <!-- <ListasComposition></ListasComposition> -->
   <!-- <EventosOption></EventosOption> -->
-  <EventosComposition></EventosComposition>
+  <!-- <EventosComposition></EventosComposition> -->
+  <!-- <PropiedadesComputadasOption></PropiedadesComputadasOption> -->
+  <PropiedadesComputadasComposition></PropiedadesComputadasComposition>
 </template>
 
 
@@ -19,8 +21,10 @@
  // import ListasComposition from './components/3-renderizado-listas/ListasComposition.vue';
 //5-Eventos
   // import EventosOption from './components/4-Eventos/EventosOption.vue'
-  import EventosComposition from './components/4-Eventos/EventosComposition.vue';
-
+  // import EventosComposition from './components/4-Eventos/EventosComposition.vue';
+//6-Propiedades Computadas
+  // import PropiedadesComputadasOption from './components/6-Propiedades-Computadas/PropiedadesComputadasOption.vue';
+  import PropiedadesComputadasComposition from './components/6-Propiedades-Computadas/PropiedadesComputadasComposition.vue';
 </script>
 
 
