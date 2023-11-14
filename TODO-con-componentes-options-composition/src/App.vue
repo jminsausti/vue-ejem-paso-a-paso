@@ -10,7 +10,11 @@
   <!-- <PropiedadesComputadasOption></PropiedadesComputadasOption> -->
   <!-- <PropiedadesComputadasComposition></PropiedadesComputadasComposition> -->
   <!-- <DataBindClassesOption></DataBindClassesOption> -->
-  <DataBindClassesComposition></DataBindClassesComposition>
+  <!-- <DataBindClassesComposition></DataBindClassesComposition> -->
+  <!-- <AxiosOption></AxiosOption> -->
+  <!-- <AxiosComposition></AxiosComposition> -->
+  <!-- <AxiosFilterOption></AxiosFilterOption> -->
+  <AxiosFilterComposition></AxiosFilterComposition>
 </template>
 
 
@@ -29,7 +33,13 @@
   // import PropiedadesComputadasComposition from './components/6-Propiedades-Computadas/PropiedadesComputadasComposition.vue';
 //9-data-binding-atributos-clases
   // import DataBindClassesOption from './components/9-data-binding-atributos-clases/DataBindClassesOption.vue';
-  import DataBindClassesComposition from './components/9-data-binding-atributos-clases/DataBindClassesComposition.vue';
+  // import DataBindClassesComposition from './components/9-data-binding-atributos-clases/DataBindClassesComposition.vue';
+//12-Axios
+    //import AxiosOption from './components/12-Axios/AxiosOption.vue';
+  // import AxiosComposition from './components/12-Axios/AxiosComposition.vue';
+//12.1-Axios-Filter
+  // import AxiosFilterOption from './components/12.1-Axios-Filter/AxiosFilterOption.vue';
+  import AxiosFilterComposition from './components/12.1-Axios-Filter/AxiosFilterComposition.vue';
 </script>
 
 
