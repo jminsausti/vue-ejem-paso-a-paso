@@ -16,11 +16,14 @@
   <!-- <AxiosFilterOption></AxiosFilterOption> -->
   <!-- <AxiosFilterComposition></AxiosFilterComposition> -->
   <!-- <PostListComponent/> -->
-  <PostListOption/>
+  <!-- <PostListOption/> -->
+  <!-- <PostListHijoPadreComponent/> -->
+  <PostListHijoPadreOption/>
 </template>
 
 
 <script setup>
+
 //0-Inicio
   // import PostContainer from './components/0-Inicio/PostContainer.vue'
   // import CounterOption from './components/0-Inicio/CounterOption.vue';
@@ -43,12 +46,14 @@
 //12.1-Axios-Filter
   // import AxiosFilterOption from './components/12.1-Axios-Filter/AxiosFilterOption.vue';
   // import AxiosFilterComposition from './components/12.1-Axios-Filter/AxiosFilterComposition.vue';
-//13-Componentes Propiedades
-  //13.1-Posts
-  // import PostListComponent from './components/13-Componentes-Props/13.1-Posts/PostListComponent.vue';
-  import PostListOption from './components/13-Componentes-Props/13.1-Posts/PostListOption.vue';
+//13-Comunicacion entre Componentes
+  //13.1-Comunicacion Padre-Hijo => Props
+  // import PostListComponent from './components/13-ComunicacionEntreComponentes/13.1-Comunicacion Padre-Hijo/PostListComponent.vue'
+  // import PostListOption from './components/13-ComunicacionEntreComponentes/13.1-Comunicacion Padre-Hijo/PostListOption.vue'
+  //13.2-Comuicacion Hijo-Padre => emit events
+  // import PostListHijoPadreComponent from './components/13-ComunicacionEntreComponentes/13.2-Comunicacion Hijo-padre/PostList-HijoPadreComponent.vue'
+  import PostListHijoPadreOption from './components/13-ComunicacionEntreComponentes/13.2-Comunicacion Hijo-padre/PostList-HijoPadreOption.vue';  
 </script>
-
 
 <style scoped>
 h1{
