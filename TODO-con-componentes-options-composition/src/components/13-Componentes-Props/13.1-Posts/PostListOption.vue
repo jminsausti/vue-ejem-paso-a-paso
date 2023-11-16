@@ -7,14 +7,15 @@
         <PostDetailOption/> -->
         <!-- En vez de escribir explicitamente todos los componentes podemos hacer un v-for -->
         <PostDetailOption v-for="element in info" key="element.title" :title="element.title" :content="element.content"/>
+    
     </div>
 </template>
 
 <script> 
     import PostDetailOption from './PostDetailOption.vue';
-    export default{
+    export default {
     name: 'PostListOption',
-    components: {PostDetailOption},
+    components: { PostDetailOption },
     data(){
         return{
             info : [{

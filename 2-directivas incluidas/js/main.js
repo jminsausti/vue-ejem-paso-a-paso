@@ -8,7 +8,18 @@
 }); */
 
 //Vuejs 3
-Vue.createApp({
+const app = {
+	data(){
+		return{
+			conectado: true, 
+			edad : 35
+		}
+	} 
+}
+
+Vue.createApp(app).mount('main');
+
+/* Vue.createApp({
 	//el: 'main',
 	data(){
 		return{
@@ -16,4 +27,4 @@ Vue.createApp({
 			edad : 35
 		}
 	} 
-}).mount('main');
+}).mount('main'); */

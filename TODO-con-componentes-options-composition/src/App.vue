@@ -16,7 +16,7 @@
   <!-- <AxiosFilterOption></AxiosFilterOption> -->
   <!-- <AxiosFilterComposition></AxiosFilterComposition> -->
   <!-- <PostListComponent/> -->
-  <PostLisOption/>
+  <PostListOption/>
 </template>
 
 
@@ -46,7 +46,7 @@
 //13-Componentes Propiedades
   //13.1-Posts
   // import PostListComponent from './components/13-Componentes-Props/13.1-Posts/PostListComponent.vue';
-  import PostLisOption from './components/13-Componentes-Props/13.1-Posts/PostLisOption.vue';
+  import PostListOption from './components/13-Componentes-Props/13.1-Posts/PostListOption.vue';
 </script>
 
 

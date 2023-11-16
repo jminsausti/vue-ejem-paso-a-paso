@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-    import PostdetailComponent from './PostDetailComponent.vue';
+    import PostDetailComponent from './PostDetailComponent.vue';
     let info = [{
         title :"Post 1",
         content : "Texto de ejemplo 1"
