@@ -10,25 +10,25 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-   const props = defineProps([ 'title', 'content']);
-   /* const props= defineProps({
-        title: {
-            type: String,
-            required: true
-        },
-        content:{
-            type: String,
-            required:false,
-            default: "Este post no tiene contenido"
-        }
+    import { ref, defineProps, defineEmits } from 'vue';
+    const props = defineProps([ 'title', 'content']);
+    /* const props= defineProps({
+            title: {
+                type: String,
+                required: true
+            },
+            content:{
+                type: String,
+                required:false,
+                default: "Este post no tiene contenido"
+            }
 
-    }) */
-    const emit = defineEmits(['Mensaje']);
-    const lanzarMensaje =()=>{
-        // emit('Mensaje','Este mensaje lo envía el hijo')//si ejecuto esto envío un mensaje estático
-        emit('Mensaje', msg.value)//si ejecutamos así le enviamos el mensaje que mete el usuario en el campo de texto
-    }
+        }) */
+        const emit = defineEmits(['Mensaje']);
+        const lanzarMensaje =()=>{
+            // emit('Mensaje','Este mensaje lo envía el hijo')//si ejecuto esto envío un mensaje estático
+            emit('Mensaje', msg.value)//si ejecutamos así le enviamos el mensaje que mete el usuario en el campo de texto
+        }
     let msg =ref ('')
 
 </script>

@@ -8,8 +8,9 @@
 </template>
 
 <script setup>
-   const props = defineProps([ 'title', 'content'])
-   /* const props= defineProps({
+    import { defineProps } from 'vue';
+    const props = defineProps([ 'title', 'content'])
+    /* const props= defineProps({
         title: {
             type: String,
             required: true
