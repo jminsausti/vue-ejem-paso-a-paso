@@ -1,6 +1,6 @@
 <template>
   <h1>Diferentes Componentes</h1>
-  
+  <!-- <PostContainer></PostContainer> -->
   <!-- <CounterOption /> -->
   <!-- <CounterComposition></CounterComposition> -->
   <!-- <ListasOption></ListasOption> -->
@@ -14,14 +14,17 @@
   <!-- <AxiosOption></AxiosOption> -->
   <!-- <AxiosComposition></AxiosComposition> -->
   <!-- <AxiosFilterOption></AxiosFilterOption> -->
-  <AxiosFilterComposition></AxiosFilterComposition>
+  <!-- <AxiosFilterComposition></AxiosFilterComposition> -->
+  <!-- <PostListComponent/> -->
+  <PostLisOption/>
 </template>
 
 
 <script setup>
-  //import PostContainer from './components/PostContainer.vue';
-  // import CounterOption from './components/CounterOption.vue';
-  // import CounterComposition from './components/CounterComposition.vue';
+//0-Inicio
+  // import PostContainer from './components/0-Inicio/PostContainer.vue'
+  // import CounterOption from './components/0-Inicio/CounterOption.vue';
+  // import CounterComposition from './components/0-Inicio/CounterComposition.vue';
 //3-Renderizado de Listas
   // import ListasOption from './components/3-renderizado-listas/3-ListasOption.vue'
  // import ListasComposition from './components/3-renderizado-listas/ListasComposition.vue';
@@ -39,7 +42,11 @@
   // import AxiosComposition from './components/12-Axios/AxiosComposition.vue';
 //12.1-Axios-Filter
   // import AxiosFilterOption from './components/12.1-Axios-Filter/AxiosFilterOption.vue';
-  import AxiosFilterComposition from './components/12.1-Axios-Filter/AxiosFilterComposition.vue';
+  // import AxiosFilterComposition from './components/12.1-Axios-Filter/AxiosFilterComposition.vue';
+//13-Componentes Propiedades
+  //13.1-Posts
+  // import PostListComponent from './components/13-Componentes-Props/13.1-Posts/PostListComponent.vue';
+  import PostLisOption from './components/13-Componentes-Props/13.1-Posts/PostLisOption.vue';
 </script>
 
 
