@@ -12,9 +12,9 @@
     import { PostServicio } from '@/servicios/PostServicio'
     import { onMounted} from 'vue'
     const service = new PostServicio();
-    const posts = service.posts;
+    const posts = service.posts; //Importante aquí estamos llamando al getter, y como hemos seguido la nomenclatura de getters y setters 
     
-    onMounted(async ()=>{
+    onMounted(async ()=>{//al montar la instancia llamamos al servicio para que recoja los datos
         await service.fetchAll();
     })
 

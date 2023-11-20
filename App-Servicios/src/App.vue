@@ -1,11 +1,13 @@
 <template>
-  <PostListado/>
+  <PostListadoComposition/>
+  <!-- <PostListadoOption/> -->
 </template>
 
 
 <script setup>
 
-import PostListado from './components/PostListado.vue';
+import PostListadoComposition from './components/PostListadoComposition.vue';
+// import PostListadoOption from './components/PostListadoOption.vue';
 
 
 </script>
