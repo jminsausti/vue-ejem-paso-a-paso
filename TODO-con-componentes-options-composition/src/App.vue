@@ -19,7 +19,8 @@
   <!-- <PostListOption/> -->
   <!-- <PostListHijoPadreComponent/> -->
   <!-- <PostListHijoPadreOption/> -->
-  <DirectivasPersonalizadasComposition/>
+  <!-- <DirectivasPersonalizadasComposition/> -->
+  <DirectivasPersonalizadasOption />
 </template>
 
 
@@ -55,7 +56,8 @@
   // import PostListHijoPadreComponent from './components/13-ComunicacionEntreComponentes/13.2-Comunicacion Hijo-padre/PostList-HijoPadreComponent.vue'
   // import PostListHijoPadreOption from './components/13-ComunicacionEntreComponentes/13.2-Comunicacion Hijo-padre/PostList-HijoPadreOption.vue'; 
   //2- Directivas Personalizadas 
-  import DirectivasPersonalizadasComposition from './components/2-Directivas-Personalizadas/DirectivasPersonalizadasComposition.vue';
+  // import DirectivasPersonalizadasComposition from './components/2-Directivas-Personalizadas/DirectivasPersonalizadasComposition.vue';
+  import DirectivasPersonalizadasOption from './components/2-Directivas-Personalizadas/DirectivasPersonalizadasOption.vue';
 </script>
 
 <style scoped>

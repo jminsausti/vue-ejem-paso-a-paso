@@ -6,6 +6,7 @@ import App from './App.vue'
 
 const app=createApp(App)
 
+//Como queremos que las directivas se aplique a nivel global, las definimos en main.js
 //directiva personalizada. Aplicamos aquí lo que queremos
 app.directive('fontSize',{
     beforeMount: (el, binding) =>{//se aplica la directiva personalizada antes de montarse la instancia
