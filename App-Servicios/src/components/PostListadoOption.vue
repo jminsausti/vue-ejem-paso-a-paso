@@ -1,5 +1,6 @@
 <template>
     <ul>
+        <h1>POSTS</h1>
         <li v-for="post in posts" :key="post.id">
             {{ post.title }}
         </li>
@@ -7,20 +8,20 @@
 </template>
 
 <script>
-    import { PostServicio } from '@/servicios/PostServicio'
+    import { PostServicio } from '@/servicios/PostServicioOption.js'
     export default{
         name: 'PostListOption',
         components: {},
         data(){
-            const service = new PostServicio();
-            const posts = service.posts;
             return {
-                service, posts
+                service: new PostServicio(),
+                posts : [], 
             }
         },
         async mounted() {
-            
+            // this.posts = this.service.posts
             await this.service.fetchAll();
+            this.posts = await this.service.posts
         },
         methods:{
             
