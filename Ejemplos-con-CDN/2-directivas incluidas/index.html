@@ -24,6 +24,8 @@
         <template v-if="conectado"> <!-- Si lo metemos dentro de template afecta a todo lo que contiene -->
             <h3>Bienvenido Txomin</h3>
             <ul>
+                <!-- Podríamos incluir <template> dentro de un <ul>, por ejemplo, para que se vean los li
+                pero no podemos incluir un div entre un <ul> y un <li>, y si ponemos el v-if en el <ul> podríamos no renderizarlo -->
                 <li>
                     <a href="#">Mis datos</a>
                     <a href="#">Mensajes</a>
