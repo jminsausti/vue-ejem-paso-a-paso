@@ -33,7 +33,8 @@ const vueApp={
     //el: 'main', //en Vue 3 no es necesario porque ya le decimos luego donde se monta
     data(){ //ahora data no es un objeto. Es una funcion
         return {			//aqui especificamos el modelo, es decir la fuente de datos
-            mensaje: 'Hola mundo!'
+            mensaje: 'Hola mundo!',
+            semana:['lunes','martes']
         }
     }
 }
