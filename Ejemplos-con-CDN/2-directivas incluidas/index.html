@@ -16,7 +16,7 @@
         
     	<h1 v-if="conectado">Aquí uso v-if</h1>  <!-- 2- Si está a false desaparece el elemento del DOM -->
 
-    	<h2 v-if="edad < 18">No puedes entrar. Eres menor</h2>
+    	<h2 v-if="edad < 18 && conectado">No puedes entrar. Eres menor</h2>
         <h2 v-else-if="edad > 200">Eres inmortal??.</h2>
         <h2 v-else>Puedes entrar.</h2>
 
@@ -45,7 +45,7 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         
     <!-- <script src="../Vue.min/vue.min.js"></script> -->
-    <script src="../Vue.min/axios.min.js"></script>
+    
     <script src="js/main.js"></script>
 </body>
 

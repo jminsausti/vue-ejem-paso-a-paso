@@ -10,19 +10,19 @@
 
 <body>
     <main>
-        <!-- {{ laborales }} -->
+        {{ laborales }}
         <!-- Matriz -->
         <ul>
             <li v-for="dia in laborales">{{ dia }}</li>
         </ul>
 
         <!-- Matriz de objetos (collection) -->
-        <!-- <ul>
+        <ul>
               <li v-for="(tarea, index) in tareas">
                 {{ index}} - {{ tarea.nombre }} 
                 <small>({{ tarea.prioridad}})</small>
             </li>
-        </ul> -->
+        </ul>
 
         <!-- Objeto -->
         <ul>
@@ -30,7 +30,7 @@
                {{ index }} - {{ key }}: {{value}} 
             </li>
         </ul>
-        <pre>{{ $data }}</pre>
+        <!-- <pre>{{ $data }}</pre> -->
     </main>
     <!-- Vuejs 2 -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  -->

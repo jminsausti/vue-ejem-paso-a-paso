@@ -11,7 +11,7 @@
 const app = {
 	data(){
 		return{
-			conectado: true, 
+			conectado: false, 
 			edad : 35
 		}
 	} 
