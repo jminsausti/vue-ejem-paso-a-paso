@@ -1,13 +1,13 @@
 <template>
-  <!-- <PostListadoComposition/> -->
-  <PostListadoOption/>
+  <PostListadoComposition/>
+  <!-- <PostListadoOption/> -->
 </template>
 
 
 <script setup>
 
 import PostListadoComposition from './components/PostListadoComposition.vue';
-import PostListadoOption from './components/PostListadoOption.vue';
+// import PostListadoOption from './components/PostListadoOption.vue';
 
 
 </script>
@@ -15,5 +15,7 @@ import PostListadoOption from './components/PostListadoOption.vue';
 
 
 <style scoped>
-
+template{
+  align-self: center;
+}
 </style>
