@@ -1,7 +1,7 @@
 import { ref } from 'vue';
 
 class PostServicio{
-    _posts; //generamos una variable privada de clase
+    //_posts; //generamos una variable privada de clase
     constructor () {
         this._posts = [];//de esta manera conseguimos que esta variable sea reactiva y la podamos usar en el template
     }

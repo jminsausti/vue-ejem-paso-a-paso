@@ -2,6 +2,9 @@
     <h1>Hola Mundo</h1>
     <ul class="post-list">
         <li v-for="post in posts" :key="post.id">
+            <!-- <router-link> es el componente para posibilitar la navegación de los usuarios en una aplicación con el router habilitado. 
+            La ubicación destino se especifica con la propiedad to . 
+            Por defecto, renderiza una etiqueta <a> con el atributo href correspondiente -->
             <RouterLink v-bind:to="{name: 'PostDetail', params:{id:post.id }}">
                 {{ post.title }}
             </RouterLink>
@@ -14,7 +17,7 @@
 
     import { PostServicio } from '@/servicios/PostServicio'
     import { onMounted} from 'vue'
-import { RouterLink } from 'vue-router';
+    import { RouterLink } from 'vue-router';
     const service = new PostServicio();
     const posts = service.posts; //Importante aquí estamos llamando al getter, y como hemos seguido la nomenclatura de getters y setters 
     
@@ -40,5 +43,6 @@ import { RouterLink } from 'vue-router';
     }
     li:hover{
         background-color: blueviolet;
+        color: white;
     }
 </style>
