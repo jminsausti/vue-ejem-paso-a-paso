@@ -23,8 +23,8 @@ const vm={
                     puntuacion: 8
                 },
                 {
-                    titulo: 'Resident Evil',
-                    genero: 'Survival Horror',
+                    titulo: 'FIFA',
+                    genero: 'Sports',
                     puntuacion: 7,
                 },
             ]

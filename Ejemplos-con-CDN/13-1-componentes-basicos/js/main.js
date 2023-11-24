@@ -1,4 +1,4 @@
-const app=Vue.createApp({})
+const app=Vue.createApp()
 
 app.component('Saludo',{
     data(){ //en un componente el elemento data ees una fiuncion que devuelve los datos que queramos

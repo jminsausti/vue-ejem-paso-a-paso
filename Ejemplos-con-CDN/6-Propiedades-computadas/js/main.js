@@ -15,10 +15,15 @@ const vm ={
                 antiguedad: 135
             },
             {
-                titulo: 'Publicar algo todos los días',
+                titulo: 'Hacer la compra',
                 prioridad: true,
                 antiguedad: 378
             },
+            {
+                titulo: 'Limpiar el coche',
+                prioridad: true,
+                antiguedad: 250
+            }
         ]
         }  
     },

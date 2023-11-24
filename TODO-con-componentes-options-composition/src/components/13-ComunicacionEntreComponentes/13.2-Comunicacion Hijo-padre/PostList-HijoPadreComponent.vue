@@ -11,11 +11,12 @@
             :title="element.title" :content="element.content"
             @Mensaje="mostrarAlert"/>
     </div>
-    
+    <p>**{{ m  }}**</p>
 </template>
 
 <script setup>
     import PostDetailHijoPadreComponent from './PostDetail-HijoPadreComponent.vue';
+    import { ref } from 'vue'
     let info = [{
         title :"Post 1",
         content : "Texto de ejemplo 1"
@@ -32,8 +33,11 @@
         title :"Post 5",
         content : "Texto de ejemplo 5"
     }]
+    const m=ref('')
     function mostrarAlert(msg){
         alert(msg);
+        m.value=msg
+
     }
 </script>
 

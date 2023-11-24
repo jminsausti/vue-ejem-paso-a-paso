@@ -14,12 +14,14 @@
         
         <!-- En este 2º caso asociamos la clase completado en caso de que la tarea esté completada -->
         <ul>
-            <li v-for="tarea in tareas"
+            <li v-for="tarea in tareas" :style="(tarea.completado) ?  styleObject : styleObject2"
                 @click="completarTarea(tarea)"
-                v-bind:class="{completado: tarea.completado}">
+                v-bind:class="[{completado: tarea.completado}, miclase]">
                 {{ tarea.titulo }}
             </li>
         </ul>
+        <p :style="styleObject">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum enim eius dolor pariatur! Beatae odio ratione magni, at iste enim asperiores tempora deserunt veritatis nobis, eveniet modi voluptatibus ex suscipit?</p>
+
 </template>
 
 <script setup>
@@ -32,6 +34,15 @@
                         {titulo: 'Salir a correr', completado: false},
                     ]);
     const fondo = ref('bg-warning');
+    const styleObject= ref({
+                color: 'red',
+                fontSize: '23px'
+              })
+    const styleObject2 = ref({
+                color: 'blue',
+                fontSize: '13px'
+              })
+    const miclase = ref('bg-primary')
     function completarTarea(tarea) {
                 tarea.completado = !tarea.completado;
     }

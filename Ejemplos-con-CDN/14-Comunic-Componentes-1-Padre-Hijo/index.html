@@ -14,15 +14,13 @@
         <padre></padre>
 
     </div>
-    <!-- Vue2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    
     
     <!-- Vue3 -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     
     <script>
-        const app = Vue.createApp({
-        })
+        const app = Vue.createApp()
 
         app.component('padre',{
             template: //html 
@@ -41,13 +39,20 @@
             }
         });
         app.component("hijo", {
-            template: `
-                <div class="py-5 bg-success">
+            template:  //html  
+                `<div class="py-5 bg-success">
                     <h4 >Componente hijo</h4>
                     <h5>{{ numero }}</h5>
+                    <br>
+                    <h5>***{{ mensaje }}***</h5>
                 </div>
                 `,
             props: ["numero"], //en props recibo los datos que nos manda el componente padre
+            data(){
+                return{
+                    mensaje: "Hola mundo" //datos del propio componente
+                }
+            }
             });
 
         app.mount('#app')

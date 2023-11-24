@@ -30,7 +30,8 @@ const vm={
         tareas: [
             'Aprender Vue.js',
             'Aprender ES6',
-            'Publicar algo todos los días'
+            'Hacer la compra',
+            'Limpiar el coche'
         ]
         }
     },
