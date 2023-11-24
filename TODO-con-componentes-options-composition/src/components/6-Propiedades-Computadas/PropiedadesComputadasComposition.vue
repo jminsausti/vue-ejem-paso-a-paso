@@ -29,7 +29,7 @@
 </template>
 
 <script setup>
-    import { ref, computed } from 'vue';
+    import { ref, computed } from 'vue'
     const mensaje = ref( 'Hola Mundo :) !');
     const nuevaTarea = ref(null);
     const tareas = ref (

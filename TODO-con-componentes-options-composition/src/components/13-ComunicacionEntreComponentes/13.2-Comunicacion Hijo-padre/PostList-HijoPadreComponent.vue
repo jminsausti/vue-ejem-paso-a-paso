@@ -16,7 +16,8 @@
 
 <script setup>
     import PostDetailHijoPadreComponent from './PostDetail-HijoPadreComponent.vue';
-    import { ref } from 'vue'
+    import { ref } from 'vue'; 
+
     let info = [{
         title :"Post 1",
         content : "Texto de ejemplo 1"
