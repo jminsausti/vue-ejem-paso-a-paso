@@ -2,7 +2,14 @@ const vm={
    
     data() {
         return{
-            
+            styleObject: {
+                color: 'red',
+                fontSize: '23px'
+              },
+              styleObject2: {
+                color: 'blue',
+                fontSize: '13px'
+              },
             tareas: [
                 {titulo: 'Hacer la compra', completado: false},
                 {titulo: 'Aprender Vue.js', completado: true},
