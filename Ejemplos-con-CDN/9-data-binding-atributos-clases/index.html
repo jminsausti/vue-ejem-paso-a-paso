@@ -16,6 +16,9 @@
         .completado {
             text-decoration: line-through;
         }
+        .rojo{
+            color:red
+        }
     </style>
 </head>
 
@@ -36,9 +39,9 @@
         
         <!-- En este 2º caso asociamos la clase completado en caso de que la tarea esté completada -->
         <ul>
-            <li v-for="tarea in tareas"
+            <li v-for="tarea in tareas" 
                 @click="completarTarea(tarea)"
-                v-bind:class="{completado: tarea.completado}">
+                v-bind:class="[{completado: tarea.completado}, miclase] ">
                 {{ tarea.titulo }}
             </li>
         </ul>
