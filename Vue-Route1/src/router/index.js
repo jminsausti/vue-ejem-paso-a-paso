@@ -36,10 +36,11 @@ const router = createRouter({
       name : 'blog',
       component : BlogView 
     },
+    // Este código define una ruta para un post de blog con un parámetro dinámico de ID y lo vincula a un componente de vista de publicación.
     {
-      path : '/blog/:id',
-      name : 'post',
-      component :PostView 
+      path: '/blog/:id',
+      name: 'post',
+      component: PostView 
     }
   ]
 })

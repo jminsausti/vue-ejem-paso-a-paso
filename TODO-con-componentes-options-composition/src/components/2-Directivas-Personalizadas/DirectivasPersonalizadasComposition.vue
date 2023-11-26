@@ -6,6 +6,7 @@
     <p></p>
     <hr>
     <h3>Directiva aplicada con dato especificado en main.js</h3>
+    <!-- Este código muestra el uso de una directiva personalizada para cambiar el tamaño de la fuente de un párrafo -->
     <p v-fontSize>Este párrafo ha cambiado de tamaño la letra desde una directiva personalizada</p>
     <br>
     <p v-fontSize>{{ mensaje }}</p>
@@ -24,12 +25,19 @@
     <p v-customFont.lg>Aplicamos modificador de tamaño a 25px</p>
     <p v-customFont.red>Aplicamos modificados de color a red</p>
     <p v-customFont.xl.green>Aplicamos modificador de tamaño xl y color green</p>
+
+    <h3>Directiva declarada en el propio componente</h3>
+    <p v-Color>Me pone el color a orange</p>
 </template>
 
 <script setup>
     import { ref, computed } from 'vue';
     const mensaje =ref('Directiva Aplicada')
     let size1 = ref (10)
+
+    const vColor = (el)=>{
+        el.style.color = 'orange'
+    }
 
 </script>   
 

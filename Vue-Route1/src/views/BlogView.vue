@@ -5,6 +5,7 @@
     <ul>
         
         <li>
+ <!-- Genera un enlace de enrutador que redirige a una página de publicación con el parámetro de ID establecido en 1. -->
             <RouterLink :to="{ name: 'post', params:{id:1} }">Post 1</RouterLink>
         </li>
         <li>

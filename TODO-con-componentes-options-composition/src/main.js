@@ -19,7 +19,7 @@ app.directive('customSize1',{
     beforeMount:(el, binding) =>{//ahora aplicamos la directiva en función de lo que se especifica en el Componente
         el.style.fontSize = binding.value + "px"
     },
-    updated:(el,binding) =>{//como ahora la dirctiva se aplica al modificar la instancia tenemos que añadir este Hook
+    updated:(el,binding) =>{//como ahora la directiva se aplica al modificar la instancia tenemos que añadir este Hook
         el.style.fontSize = parseInt(binding.value) + "px"
     }
 })

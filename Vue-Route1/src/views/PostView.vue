@@ -9,6 +9,9 @@ import { useRoute} from 'vue-router';
 let postId = ref('');
 
 onMounted(()=>{
+
+//  Código para obtener el ID del parámetro de ruta y asignarlo a la variable postId.
+ 
     const route = useRoute();
     postId.value =  route.params.id
 })

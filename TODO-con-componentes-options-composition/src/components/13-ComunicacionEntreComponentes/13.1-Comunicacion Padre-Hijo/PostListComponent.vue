@@ -6,6 +6,16 @@
         <PostDetailComponent/>
         <PostDetailComponent/> -->
         <!-- En vez de escribir explicitamente todos los componentes podemos hacer un v-for -->
+<!-- vue
+/**
+ * Componente de lista de publicaciones
+ * 
+ * Este componente muestra una lista de publicaciones utilizando el componente PostdetailComponent.
+ * Recibe una matriz de objetos 'info' que contiene títulos y contenido de las publicaciones.
+ * Para cada elemento en la matriz 'info', se renderiza un componente PostdetailComponent.
+ * 
+ */ -->
+
         <PostdetailComponent v-for="element in info" key="element.title" :title="element.title" :content="element.content"/>
     </div>
     

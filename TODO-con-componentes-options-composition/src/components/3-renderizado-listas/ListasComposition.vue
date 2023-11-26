@@ -2,12 +2,12 @@
     <!-- {{ laborales }} -->
         <!-- Matriz -->
         <ul>
-            <li v-for="dia in laborales">{{ dia }}</li>
+            <li v-for="dia in laborales" >{{ dia }}</li>
         </ul>
         <br>
         <!-- Matriz de objetos (collection) -->
         <ul>
-              <li v-for="(tarea, index) in tareas">
+              <li v-for="(tarea, index) in tareas" :key="tarea.nombre">
                 {{ index}} - {{ tarea.nombre }} 
                 <small>({{ tarea.prioridad}})</small>
             </li>
