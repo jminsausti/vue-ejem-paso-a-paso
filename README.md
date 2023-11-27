@@ -1,10 +1,11 @@
-# vue-pinia
-
-This template should help get you started developing with Vue 3 in Vite.
+# vue-ejemplos
+Ejemplos para el aprendizaje del framework Vue.js
+En la carpeta de Ejemplos con CDN desarrollamos ejemplos sencillos cargando el framework desde un CDN
+En la carpeta TODO-con-....desarrollamos los mismos ejemplos pero trabajando con componentes
 
 ## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
 ## Customize configuration
 
