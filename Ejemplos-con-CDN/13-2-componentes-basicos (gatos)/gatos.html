@@ -18,11 +18,19 @@
     <script>
         const app=Vue.createApp({})
         app.component('gato', {
-            template: `<img :src="urlCompleta">`,
+            template: //html
+                `
+                    <img :src="urlCompleta">
+                    <!--<img :src="'https://placekitten.com/'+ancho+'/'+alto"> Esto es otra opcion-->
+                `,
+            mounted(){
+                this.ancho = Math.floor(Math.random() * 600) + 100;
+                this.alto = Math.floor(Math.random() * 600) + 100;
+            },    
             data() {
                 return {
-                    ancho: Math.floor(Math.random() * 600) + 100,
-                    alto: Math.floor(Math.random() * 600) + 100,
+                    ancho:'',
+                    alto: '',
                 }
             },
             computed: {
