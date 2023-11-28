@@ -22,15 +22,11 @@
                 `
                     <img :src="urlCompleta">
                     <!--<img :src="'https://placekitten.com/'+ancho+'/'+alto"> Esto es otra opcion-->
-                `,
-            mounted(){
-                this.ancho = Math.floor(Math.random() * 600) + 100;
-                this.alto = Math.floor(Math.random() * 600) + 100;
-            },    
+                `,    
             data() {
                 return {
-                    ancho:'',
-                    alto: '',
+                    ancho : Math.floor(Math.random() * 600) + 100,
+                    alto: Math.floor(Math.random() * 600) + 100,
                 }
             },
             computed: {
