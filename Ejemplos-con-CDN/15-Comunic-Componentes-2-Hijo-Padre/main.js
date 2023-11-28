@@ -27,6 +27,8 @@ const app = Vue.createApp({
                 <h4 >Componente hijo</h4>
                 <h5>{{ numero }}</h5>
                 <h4>Nombre: {{nombre}}</h4><!-- Este dato irá del componente hijo al padre-->
+                <input type="text" v-model="nombre" placeholder="Lo que introduzcas se verá en el padre"/><!-- Este dato irá del componente hijo al padre-->
+                
             </div>
             `,
         props: ["numero"], //en props recibo los datos que nos manda el componente padre,
