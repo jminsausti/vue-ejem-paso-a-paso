@@ -20,8 +20,9 @@
         app.component('gato', {
             template: //html
                 `
+                <h3>{{ ancho }}</h3>
                     <img :src="urlCompleta">
-                    <!--<img :src="'https://placekitten.com/'+ancho+'/'+alto"> Esto es otra opcion-->
+                    <!--<img v-bind:src="'https://placekitten.com/'+ancho+'/'+alto"> Esto es otra opcion-->
                 `,    
             data() {
                 return {

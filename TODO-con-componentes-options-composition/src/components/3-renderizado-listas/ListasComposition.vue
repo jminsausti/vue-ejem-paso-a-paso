@@ -27,11 +27,11 @@
     let counter = ref(0);
 
     const laborales =ref( ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes']);  
-    const tareas= ref( [
+    const tareas=  [
                 {nombre: 'Hacer la compra', prioridad: 'baja'},
                 {nombre: 'Aprender Vue', prioridad: 'alta'},
                 {nombre: 'Ir al gimnasio', prioridad: 'baja'},
-            ]);
+            ];
     const persona= ref( {
                 nombre: 'Txomin',
                 profesion: 'dev',
