@@ -4,7 +4,7 @@
   <!-- <CounterOption /> -->
   <!-- <CounterComposition></CounterComposition> -->
   <!-- <ListasOption></ListasOption> -->
-  <!-- <ListasComposition></ListasComposition> -->
+  <ListasComposition></ListasComposition>
   <!-- <EventosOption></EventosOption> -->
   <!-- <EventosComposition></EventosComposition> -->
   <!-- <PropiedadesComputadasOption></PropiedadesComputadasOption> -->
@@ -19,7 +19,7 @@
   <!-- <PostListOption/> -->
   <!-- <PostListHijoPadreComponent/> -->
   <!-- <PostListHijoPadreOption/> -->
-  <DirectivasPersonalizadasComposition/>
+  <!-- <DirectivasPersonalizadasComposition/> -->
   <!-- <DirectivasPersonalizadasOption /> -->
 </template>
 
@@ -31,8 +31,8 @@
   // import CounterOption from './components/0-Inicio/CounterOption.vue';
   // import CounterComposition from './components/0-Inicio/CounterComposition.vue';
 //3-Renderizado de Listas
-  // import ListasOption from './components/3-renderizado-listas/3-ListasOption.vue'
- // import ListasComposition from './components/3-renderizado-listas/ListasComposition.vue';
+  // import ListasOption from './components/3-renderizado-listas/ListasOption.vue'
+ import ListasComposition from './components/3-renderizado-listas/ListasComposition.vue';
 //5-Eventos
   // import EventosOption from './components/4-Eventos/EventosOption.vue'
   // import EventosComposition from './components/4-Eventos/EventosComposition.vue';
@@ -56,7 +56,7 @@
   // import PostListHijoPadreComponent from './components/13-ComunicacionEntreComponentes/13.2-Comunicacion Hijo-padre/PostList-HijoPadreComponent.vue'
   // import PostListHijoPadreOption from './components/13-ComunicacionEntreComponentes/13.2-Comunicacion Hijo-padre/PostList-HijoPadreOption.vue'; 
   //2- Directivas Personalizadas 
-  import DirectivasPersonalizadasComposition from './components/2-Directivas-Personalizadas/DirectivasPersonalizadasComposition.vue';
+  // import DirectivasPersonalizadasComposition from './components/2-Directivas-Personalizadas/DirectivasPersonalizadasComposition.vue';
   // import DirectivasPersonalizadasOption from './components/2-Directivas-Personalizadas/DirectivasPersonalizadasOption.vue';
 </script>
 

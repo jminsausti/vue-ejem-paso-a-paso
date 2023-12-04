@@ -1,4 +1,5 @@
 <template>
+    <h1>Component listas</h1>
     <!-- {{ laborales }} -->
         <!-- Matriz -->
         <ul>
