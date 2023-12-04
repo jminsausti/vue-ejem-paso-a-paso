@@ -12,6 +12,7 @@
         <gato></gato>
         <gato></gato>
         <gato></gato>
+        <dato />
     </div>
     <!-- Vue3 -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -31,10 +32,21 @@
                 }
             }
         });
+        app.component('dato',{
+            template: //html
+            `
+            <h3>{{mensaje}}</h3>
+            `,
+            data(){
+                return{
+                    mensaje:'Hola Component DATO'
+                }
+            }
+        })
 
         app.mount('#app')
 
-        Vue.config.devtools = true;
+       // Vue.config.devtools = true;
     </script>
 </body>
 </html>

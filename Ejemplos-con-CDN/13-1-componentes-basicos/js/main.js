@@ -1,5 +1,12 @@
-const app=Vue.createApp()
-
+const app=Vue.createApp({
+    data(){
+        return{ //en un componente el elemento data ees una fiuncion que devuelve los datos que queramos
+            nombre:'John',
+            apellido:'Johnson',
+        }
+    }
+})
+    
 app.component('Saludo',{
     data(){ //en un componente el elemento data ees una fiuncion que devuelve los datos que queramos
         return {
@@ -12,7 +19,8 @@ app.component('Saludo',{
         <!--como tengo más de un elemento los tengo que envolver en un div-->
         <div>
             <h1>Saludo de forma statica dentro Componente 'Saludo' </h1>
-            <h3>{{ saludo }}</h3>
+            <h3> {{ saludo }} </h3>
+            <h3>{{ nombre }}</h3>
         </div>
     `,
     
@@ -32,6 +40,8 @@ app.component('Contador',{
         </div>
 
     `
-})
+}),
+
+
 
 app.mount('#app')
