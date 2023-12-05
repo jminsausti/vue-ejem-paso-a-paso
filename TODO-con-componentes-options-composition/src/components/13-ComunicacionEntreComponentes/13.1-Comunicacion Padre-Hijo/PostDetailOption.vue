@@ -11,7 +11,7 @@
     export default{
         name: 'PostDetailOption',
         components: {},
-        props:[ 'title', 'content'], 
+        props:[ 'title', 'content'], //propiedades que recibo del componente padre
         data(){
             return{
 

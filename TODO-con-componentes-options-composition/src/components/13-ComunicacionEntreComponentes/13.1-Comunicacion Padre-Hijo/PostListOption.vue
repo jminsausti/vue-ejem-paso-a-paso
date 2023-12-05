@@ -14,8 +14,8 @@
 <script> 
     import PostDetailOption from './PostDetailOption.vue';
     export default {
-    name: 'PostListOption',
-    components: { PostDetailOption },
+    name: 'PostListOption',//padre
+    components: { PostDetailOption },//hijo
     data(){
         return{
             info : [{
