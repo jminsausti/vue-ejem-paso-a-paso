@@ -16,8 +16,9 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'pinia'
 import {useCounterStore} from '@/stores/counter'
+import { mapState, mapActions } from 'pinia'
+
 export default{
   computed:{
     ...mapState(useCounterStore, ['contador','parImpar'])
