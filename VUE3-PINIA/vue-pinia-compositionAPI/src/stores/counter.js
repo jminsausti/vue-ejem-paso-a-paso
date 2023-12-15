@@ -1,6 +1,8 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
+//Definimos el almacén "counter" mediante defineStore
+//Este almacén contendrá el estado, las getters y las acciones
 export const useCounterStore = defineStore('counter', {
   state: () => ({ 
     contador:5
