@@ -19,6 +19,8 @@
 //Se están importando las funciones mapState y mapActions de Pinia, que se utilizan para mapear las propiedades del estado y las acciones de un store en las propiedades computadas y métodos de un componente.
 import { mapState, mapActions } from 'pinia'
 import {useCounterStore} from '@/stores/counter'
+import { mapState, mapActions } from 'pinia'
+
 export default{
   computed:{
     //En esta sección se utiliza mapState para mapear las propiedades del estado del store useCounterStore en las propiedades computadas del componente. En este caso, se están mapeando las propiedades contador y parImpar del store al componente.
