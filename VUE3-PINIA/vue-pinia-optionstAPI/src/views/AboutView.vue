@@ -8,6 +8,7 @@
 </template>
 
 <script>
+  //En este caso solo importamos el mapState porque solo vamos a mostrar el valor del contador
   import { mapState } from 'pinia'
   import {useCounterStore} from '@/stores/counter'
   export default{
