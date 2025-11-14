@@ -1,32 +1,31 @@
 // Vue.prototype.$http = axios;  si quiero usar la libreria axios pero con la sintaxis de vue-resource
 
 const vm = {
-    mounted() {
-        this.cargarPersonas();
-    },
-    data() {
-        return{
-            personas: [],
-        sexo: ''
-        }
-    },
-    methods: {
-        cargarPersonas() {
-            /*this.$http.get('https://randomuser.me/api/?results=500')
+    setup(){ // Composition API
+        const personas = Vue.ref([])
+        const sexo = Vue.ref('')
+
+        const cargarPersonas = () => {
+            /*axios.get('https://randomuser.me/api/?results=500')
                 .then((respuesta) => {
-                    this.personas = respuesta.data.results;
+                    personas.value = respuesta.data.results;
                 });*/
             axios.get('https://randomuser.me/api/?results=50')
                 .then((respuesta) => {
-                    console.log(respuesta);
-                    this.personas = respuesta.data.results; //la respuesta con vue-resource venia en body, AHORA VIENE EN data
-                });
+                    console.log(respuesta)
+                    personas.value = respuesta.data.results // la respuesta viene en data
+                })
         }
-    },
-    computed:{
-        personasHM() {
-            return this.personas.filter((sdg) => sdg.name.title == this.sexo);
-        }
+
+        const personasHM = Vue.computed(() => {
+            return personas.value.filter((sdg) => sdg.name.title == sexo.value)
+        })
+
+        Vue.onMounted(() => {
+            cargarPersonas()
+        })
+
+        return { personas, sexo, cargarPersonas, personasHM }
     }
 };
 Vue.createApp(vm).mount('main')

@@ -26,6 +26,7 @@
 
         <!--2 Con Vuejs -->
         <input type="text" placeholder="Introduce tu tarea" v-model="nuevaTarea" @keyup.enter.space="agregarTarea">
+        <button type="button" @click="agregarTarea">Añadir</button>
        
         <!--3 Con Vuejs -->
         <!-- <form v-on:submit.prevent="agregarTarea">
@@ -35,11 +36,9 @@
         <pre>{{ $data }}</pre>
     </main>
     
-    <!-- Vuejs 2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  -->
-
+    
     <!-- Vuejs 3 -->
-    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/main.js"></script>
 </body>
 

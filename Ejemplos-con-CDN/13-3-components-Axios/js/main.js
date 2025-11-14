@@ -1,19 +1,20 @@
-const app=Vue.createApp({
-    mounted() {
-        axios.get('https://jsonplaceholder.typicode.com/todos')
-            .then((respuesta) => {
-                this.tareasAjax = respuesta.data;
-            });
-    },
-    data()  {
-        return {
-            tareasAjax: [],
-            tareasLocales: [
-                { title: 'Hacer los deberes'},
-                { title: 'Aprender Vue'},
-                { title: 'Hacer los ejercicios'}
-            ]
-        }
+const app = Vue.createApp({
+    setup(){ // Composition API
+        const tareasAjax = Vue.ref([])
+        const tareasLocales = Vue.ref([
+            { title: 'Hacer los deberes'},
+            { title: 'Aprender Vue'},
+            { title: 'Hacer los ejercicios'}
+        ])
+
+        Vue.onMounted(() => {
+            axios.get('https://jsonplaceholder.typicode.com/todos')
+                .then((respuesta) => {
+                    tareasAjax.value = respuesta.data
+                })
+        })
+
+        return { tareasAjax, tareasLocales }
     }
 })
 
@@ -25,7 +26,6 @@ app.component('Mistareas', {
     
 });
 
-
 /*Este componente es totalmente independiente, usa los datos de su propio data, 
 eso si hay que recogerlos datos como si fuese un return de la funcion data()
 */
@@ -35,17 +35,16 @@ app.component('Otrastareas', {
             <ul><li v-for="persona in personas">{{ persona.name.first}}</li></ul>
             <img v-for="persona in personas" v-bind:src='persona.picture.thumbnail'>
     </div>`,
-    mounted() {
-        axios.get('https://randomuser.me/api/?results=5')
+    setup(){ // Composition API
+        const personas = Vue.ref([])
+        Vue.onMounted(() => {
+            axios.get('https://randomuser.me/api/?results=5')
                 .then((respuesta) => {
-                    console.log(respuesta);
-                    this.personas = respuesta.data.results; //la respuesta con vue-resource venia en body, AHORA VIENE EN data
-                });
-    },
-    data() {
-       return {
-        personas: []
-        } 
+                    console.log(respuesta)
+                    personas.value = respuesta.data.results // la respuesta viene en data
+                })
+        })
+        return { personas }
     }
 });
 

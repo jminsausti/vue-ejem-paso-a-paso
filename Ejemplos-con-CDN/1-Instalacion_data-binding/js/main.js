@@ -9,15 +9,7 @@
 
 // Vue.js -->Conseguimos la misma reactividad que antes pero ahora utilizamos vue
 
-//Vuejs 2
-/* new Vue({			//creamos una nueva instancia (objeto) vue
-    el: 'main',		//en este punto deimos con que parte del html interactuamos
-    data: {			//aqui especificamos el modelo, es decir la fuente de datos
-        mensaje: 'Hola mundo!',
-    },
-}); */
-
-//Vuejs 3
+//Vuejs 3 Options API
 /* const { createApp } = Vue
 
   createApp({
@@ -28,15 +20,15 @@
     }
   }).mount('main') */
 
-//otra forma
+//Vuejs 3 Composition API
 const vueApp={
-    //el: 'main', //en Vue 3 no es necesario porque ya le decimos luego donde se monta
-    data(){ //ahora data no es un objeto. Es una funcion
-        return {			//aqui especificamos el modelo, es decir la fuente de datos
-            mensaje: 'Hola mundo!',
-            semana:['lunes','martes']
+    setup() { // Composition API
+        const mensaje = Vue.ref('Hola mundo!')
+        const semana = Vue.ref(['lunes', 'martes'])
+        return { //exponemos al template
+            mensaje,
+            semana
         }
     }
 }
 Vue.createApp(vueApp).mount('main')
-

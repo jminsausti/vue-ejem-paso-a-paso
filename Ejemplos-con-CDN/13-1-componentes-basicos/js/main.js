@@ -1,17 +1,16 @@
-const app=Vue.createApp({
-    data(){
-        return{ //en un componente el elemento data ees una fiuncion que devuelve los datos que queramos
-            nombre:'John',
-            apellido:'Johnson',
-        }
+const app = Vue.createApp({
+    setup(){
+        const nombre = Vue.ref('John')
+        const apellido = Vue.ref('Johnson')
+        return { nombre, apellido }
     }
 })
     
 app.component('Saludo',{
-    data(){ //en un componente el elemento data ees una fiuncion que devuelve los datos que queramos
-        return {
-            saludo:'DATA DEL COMPONENTE' 
-        }
+    props: ['nombre'],
+    setup(){ // en un componente el elemento data es una funcion que devuelve los datos que queramos
+        const saludo = Vue.ref('DATA DEL COMPONENTE')
+        return { saludo, nombre }
     }, 
     template: //html
     `   
@@ -27,10 +26,9 @@ app.component('Saludo',{
 })
 
 app.component('Contador',{
-    data(){
-        return{
-            numero:0
-        }
+    setup(){
+        const numero = Vue.ref(0)
+        return { numero }
     },
     template: //html
     `

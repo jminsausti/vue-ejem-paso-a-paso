@@ -17,7 +17,7 @@
     <!-- Vue3 -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
-        const app=Vue.createApp({})
+        const app = Vue.createApp({})
         app.component('gato', {
             template: //html
                 `
@@ -25,16 +25,11 @@
                     <img :src="urlCompleta">
                     <!--<img v-bind:src="'https://placekitten.com/'+ancho+'/'+alto"> Esto es otra opcion-->
                 `,    
-            data() {
-                return {
-                    ancho : Math.floor(Math.random() * 600) + 100,
-                    alto: Math.floor(Math.random() * 600) + 100,
-                }
-            },
-            computed: {
-                urlCompleta() {
-                    return `https://placekitten.com/${this.ancho}/${this.alto}`
-                }
+            setup(){
+                const ancho = Vue.ref(Math.floor(Math.random() * 600) + 100)
+                const alto = Vue.ref(Math.floor(Math.random() * 600) + 100)
+                const urlCompleta = Vue.computed(() => `https://placekitten.com/${ancho.value}/${alto.value}`)
+                return { ancho, alto, urlCompleta }
             }
         });
         app.component('dato',{
@@ -42,10 +37,9 @@
             `
             <h3>{{mensaje}}</h3>
             `,
-            data(){
-                return{
-                    mensaje:'Hola Component DATO'
-                }
+            setup(){
+                const mensaje = Vue.ref('Hola Component DATO')
+                return { mensaje }
             }
         })
 

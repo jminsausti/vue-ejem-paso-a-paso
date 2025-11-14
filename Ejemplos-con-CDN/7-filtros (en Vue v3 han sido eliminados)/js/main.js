@@ -6,38 +6,36 @@
 // Vue.filter('alReves',(valor) => valor.split('').reverse().join(''));
 
 
-
 const vm={
-    data() {
-        return{
-            busqueda: '',
-            minimo: 5,
-            juegos: [{
-                    titulo: 'Battlefield',
-                    genero: 'FPS',
-                    puntuacion: 9
-                },
-                {
-                    titulo: 'Civilization',
-                    genero: 'Estrategia',
-                    puntuacion: 8
-                },
-                {
-                    titulo: 'FIFA',
-                    genero: 'Sports',
-                    puntuacion: 7,
-                },
-            ]
-        }
-    },
-    computed: {
-        mejoresJuegos() {
-            return this.juegos.filter((juego) => juego.puntuacion >= this.minimo);
-        },
-        buscarJuego() {
-            return this.juegos.filter((juego) => juego.titulo.includes(this.busqueda));
-        }
+    setup(){ // Composition API
+        const busqueda = Vue.ref('')
+        const minimo = Vue.ref(5)
+        const juegos = Vue.ref([
+            {
+                titulo: 'Battlefield',
+                genero: 'FPS',
+                puntuacion: 9
+            },
+            {
+                titulo: 'Civilization',
+                genero: 'Estrategia',
+                puntuacion: 8
+            },
+            {
+                titulo: 'FIFA',
+                genero: 'Sports',
+                puntuacion: 7,
+            },
+        ])
+
+        const mejoresJuegos = Vue.computed(() => {
+            return juegos.value.filter((juego) => juego.puntuacion >= minimo.value)
+        })
+        const buscarJuego = Vue.computed(() => {
+            return juegos.value.filter((juego) => juego.titulo.includes(busqueda.value))
+        })
+
+        return { busqueda, minimo, juegos, mejoresJuegos, buscarJuego }
     }
 };
 Vue.createApp(vm).mount('main')
-
