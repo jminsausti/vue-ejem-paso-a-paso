@@ -9,8 +9,11 @@ const vm={
             'Limpiar el coche'
         ])
         const agregarTarea = () => {
+            // Validar que la tarea no esté vacía, eliminar espacios en blanco, 
             const v = (nuevaTarea.value ?? '').toString().trim()
+            // Si la tarea está vacía, no hacer nada
             if (!v) return
+            // Agregar la nueva tarea al inicio del array
             tareas.value.unshift(v)
             nuevaTarea.value = null
         }

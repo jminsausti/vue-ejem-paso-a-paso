@@ -11,7 +11,7 @@ class PostServicio{
 
     async fetchAll (){
         try{
-            const url = 'https://jsonplaceholder.typicode.com/posts';
+            const url = 'https://jsonplaceholder.typicode.com/posts?_limit=5';
             const response = await fetch(url);
             const json = await response.json();
             this.#posts.value = await json //recordad que ponemos el value porque es un elemento reactivo
