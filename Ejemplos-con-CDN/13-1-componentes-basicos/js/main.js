@@ -8,9 +8,9 @@ const app = Vue.createApp({
     
 app.component('Saludo',{
     props: ['nombre'],
-    setup(){ // en un componente el elemento data es una funcion que devuelve los datos que queramos
+    setup(props){ // en un componente el elemento data es una funcion que devuelve los datos que queramos
         const saludo = Vue.ref('DATA DEL COMPONENTE')
-        return { saludo, nombre }
+        return { saludo, nombre: props.nombre }
     }, 
     template: //html
     `   
@@ -38,7 +38,7 @@ app.component('Contador',{
         </div>
 
     `
-}),
+});
 
 
 

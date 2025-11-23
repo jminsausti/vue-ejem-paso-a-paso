@@ -20,7 +20,10 @@ app.component('autor', {
         return { nombre2, cambiarProp }
     },
     template: //html
-    `<div><h1> {{ nombre }} --- {{nombre2}}</h1><button @click="cambiarProp">Cambiar Prop</button></div>`,
+    `<div>
+        <h1> {{ nombre }} --- {{nombre2}}</h1>
+        <button @click="cambiarProp">Cambiar Prop</button>
+    </div>`,
 });
 
 app.mount('main')

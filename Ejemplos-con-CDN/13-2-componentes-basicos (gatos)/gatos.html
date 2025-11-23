@@ -12,7 +12,7 @@
         <gato></gato>
         <gato></gato>
         <gato></gato>
-        <dato />
+        <dato></dato>
     </div>
     <!-- Vue3 -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -21,9 +21,11 @@
         app.component('gato', {
             template: //html
                 `
-                <h3>{{ ancho }}</h3>
+                <div>
+                    <h3>{{ ancho }}</h3>
                     <img :src="urlCompleta">
                     <!--<img v-bind:src="'https://placekitten.com/'+ancho+'/'+alto"> Esto es otra opcion-->
+                </div>
                 `,    
             setup(){
                 const ancho = Vue.ref(Math.floor(Math.random() * 600) + 100)
