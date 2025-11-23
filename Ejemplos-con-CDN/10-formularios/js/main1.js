@@ -20,6 +20,8 @@ const vm1 = {
       const bioLength = (bio.value ?? "").length
       let eNombre = ""
       let eBio = ""
+      //trim() quita los espacios en blanco al inicio y al final.
+      //rules.nombre.required && !nombre.value.trim() es para que no se envie si no hay nombre
       if (rules.nombre.required && !nombre.value.trim()) {
         eNombre = "El nombre es obligatorio"
       } else if (nombreLength < rules.nombre.min) {
@@ -34,11 +36,17 @@ const vm1 = {
     })
 
     // Contadores
+    //con mobre.value?? es para que no de error si no hay valor. 
+    // Si no es null o undefined, devuelve la cadena de la izquierda;
+    // si no la cadena vacia. Asi .length no da errores
     const nombreLength = Vue.computed(() => (nombre.value ?? "").length)
     const bioLength = Vue.computed(() => (bio.value ?? "").length)
 
     const isFormValid = Vue.computed(() => {
+      //Object.values(errors.value) devuelve un array con los valores de errors.value
       const noErrors = Object.values(errors.value).every((e) => !e)
+      //every() devuelve true si todos los elementos del array cumplen la condicion. 
+      // es decir, si no hay errores=> los valores estan vacios
       return noErrors && aceptaCondiciones.value
     })
 

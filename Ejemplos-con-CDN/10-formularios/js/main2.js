@@ -34,9 +34,11 @@ const vm2 = {
     const errors = Vue.reactive({ pais: "", provincia: "", habilidades: "", edad: "" })
 
     const validate = () => {
-      // país
-      if (rules.pais.required && !pais.value) errors.pais = "Selecciona un país"
-      else errors.pais = ""
+      // país 
+      if (rules.pais.required && !pais.value) 
+         errors.pais = "Selecciona un país"
+      else
+         errors.pais = ""
 
       // provincia si aplica
       if (provincias.value.length) {
