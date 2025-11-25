@@ -1,15 +1,15 @@
 const app = Vue.createApp({
     setup(){
-        const nombre = Vue.ref('John')
-        const apellido = Vue.ref('Johnson')
+        const nombre = Vue.ref('Jose')
+        const apellido = Vue.ref('Vuejs')
         return { nombre, apellido }
     }
 })
     
-app.component('Saludo',{
-    props: ['nombre'],
-    setup(props){ // en un componente el elemento data es una funcion que devuelve los datos que queramos
-        const saludo = Vue.ref('DATA DEL COMPONENTE')
+app.component('Saludo',{//saludo es el nombre del componente
+    props: ['nombre'], //nombre es el nombre del prop. este es un dato que recibo desde el padre
+    setup(props){ // 
+        const saludo = Vue.ref('esto es una var del COMPONENTE')
         return { saludo, nombre: props.nombre }
     }, 
     template: //html
@@ -25,8 +25,8 @@ app.component('Saludo',{
     
 })
 
-app.component('Contador',{
-    setup(){
+app.component('Contador',{//contador es el nombre del componente
+    setup(){//este componente no recibe ninguna variable, por lo que no se declaran las props
         const numero = Vue.ref(0)
         return { numero }
     },
