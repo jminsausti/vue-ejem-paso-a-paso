@@ -39,13 +39,16 @@ const tasks = [
   { id: 5, title: 'Corregir tests', status: 'open' },
 ];
 
-// Inputs locales: solo aplican a la URL cuando pulsas los botones (sin watchers)
+// Inputs locales: solo aplican a la URL cuando pulsas los botones
 const search = ref(String(route.query.q ?? ''));
 const status = ref(String(route.query.status ?? ''));
 
 function apply(){
+  // Actualiza la URL con los valores actuales de los inputs
   const q = { ...route.query };
+  // Si el valor es vacío, se elimina de la URL, si no, se añade/actualiza
   if (!search.value) delete q.q; else q.q = search.value;
+  // Lo mismo para el estado
   if (!status.value) delete q.status; else q.status = status.value;
   router.push({ query: q });
 }
@@ -56,8 +59,12 @@ const statusApplied = computed(() => String(route.query.status ?? ''));
 
 const filtered = computed(() => {
   return tasks.filter(t => {
+    // Filtrado por título y estado
+    // El título se busca sin distinguir mayúsculas/minúsculas. 
     const matchQ = String(t.title).toLowerCase().includes(qApplied.value.toLowerCase());
+    // El estado se compara directamente
     const matchS = !statusApplied.value || t.status === statusApplied.value;
+    // Solo se incluye si cumple ambos filtros
     return matchQ && matchS;
   });
 });
