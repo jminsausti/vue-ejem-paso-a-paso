@@ -16,13 +16,16 @@
         -->
         <input v-model="search" placeholder="Buscar por nombre" />
       </label>
+      <!-- Paginación se controla ahora con botones Previous/Next inferiores -->
       <label style="margin-left: 1rem;">
-        Página:
-        <!--
-          v-model.number enlaza con page y además convierte a número.
-          Este valor se usará para la query "page".
-        -->
-        <input v-model.number="page" type="number" min="1" />
+        Elementos por página:
+        <!-- Selector para elegir cuántos elementos mostrar por página -->
+        <select v-model.number="perPageLocal">
+          <option :value="2">2</option>
+          <option :value="4">4</option>
+          <option :value="8">8</option>
+          <option :value="10">10</option>
+        </select>
       </label>
       <button type="submit" style="margin-left: 1rem;">Aplicar (cambia query)</button>
     </form>
@@ -40,6 +43,13 @@
     <ul>
       <li v-for="item in paginatedItems" :key="item.id">{{ item.name }}</li>
     </ul>
+
+    <!-- Controles de paginación tipo Previous / Next -->
+    <div style="margin-top: 1rem; display: flex; gap: .75rem; align-items: center;">
+      <button type="button" @click="goPrevious" :disabled="page <= 1">Previous</button>
+      <span>Página {{ page }} de {{ totalPages }}</span>
+      <button type="button" @click="goNext" :disabled="page >= totalPages">Next</button>
+    </div>
   </div>
 </template>
 
@@ -61,7 +71,17 @@ const allItems = [
   { id: 3, name: 'Curso Vue avanzado' },
   { id: 4, name: 'Curso React' },
   { id: 5, name: 'Curso Angular' },
-  { id: 6, name: 'Curso Svelte' }
+  { id: 6, name: 'Curso Svelte' },
+  { id: 7, name: 'Curso Node.js' },
+  { id: 8, name: 'Curso Django' },
+  { id: 9, name: 'Curso Flask' },
+  { id: 10, name: 'Curso Ruby on Rails' },
+  { id: 11, name: 'Curso Laravel' },
+  { id: 12, name: 'Curso Spring Boot' },
+  { id: 13, name: 'Curso ASP.NET' },
+  { id: 14, name: 'Curso PHP básico' },
+  { id: 15, name: 'Curso Python para principiantes'},
+  { id: 16, name: 'Curso Java para principiantes' }
 ]
 
 // Leemos los valores iniciales desde la query de la URL, si existen.
@@ -73,7 +93,8 @@ const allItems = [
 //       pero todavía no lo hemos visto).
 const search = ref(route.query.search ?? '')
 const page = ref(Number(route.query.page ?? 1))
-const perPage = 10
+// Valor por defecto de elementos por página, puede venir de la query
+const perPageLocal = ref(Number(route.query.perPage ?? 2))
 
 // Filtramos los elementos según el término de búsqueda
 // IMPORTANTE: aquí usamos SOLO la query de la URL (route.query.search).
@@ -86,9 +107,19 @@ const filteredItems = computed(() => {
 })
 
 // Hacemos una paginación muy simple en memoria
+const perFromUrl = computed(() => Number(route.query.perPage ?? perPageLocal.value))
+
+const totalPages = computed(() => {
+  const total = filteredItems.value.length
+  const size = perFromUrl.value || 1
+  return Math.max(1, Math.ceil(total / size))
+})
+
 const paginatedItems = computed(() => {
-  const start = (page.value - 1) * perPage
-  return filteredItems.value.slice(start, start + perPage)
+  const size = perFromUrl.value
+  const safePage = Math.min(Math.max(1, page.value), totalPages.value)
+  const start = (safePage - 1) * size
+  return filteredItems.value.slice(start, start + size)
 })
 
 // Cuando el usuario pulsa "Aplicar", actualizamos la URL con router.push
@@ -101,8 +132,25 @@ const aplicarFiltros = () => {
       // Si search está vacío, mejor no incluirlo en la query
       search: search.value || undefined,
       // Si la página es 1, tampoco la incluimos para no ensuciar la URL
-      page: page.value !== 1 ? page.value : undefined
+      page: page.value !== 1 ? page.value : undefined,
+      // Guardar en la URL cuántos elementos por página queremos
+      perPage: perPageLocal.value !== 2 ? perPageLocal.value : undefined
     }
   })
+}
+
+// Navegación de paginación inferior
+const goPrevious = () => {
+  if (page.value > 1) {
+    router.push({ name: 'lista', query: { search: route.query.search || undefined, perPage: perFromUrl.value !== 2 ? perFromUrl.value : undefined, page: page.value - 1 } })
+    page.value = page.value - 1
+  }
+}
+
+const goNext = () => {
+  if (page.value < totalPages.value) {
+    router.push({ name: 'lista', query: { search: route.query.search || undefined, perPage: perFromUrl.value !== 2 ? perFromUrl.value : undefined, page: page.value + 1 } })
+    page.value = page.value + 1
+  }
 }
 </script>

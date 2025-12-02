@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tareas + Query (Vite)</title>
+  <style>
+    :root{ --bg:#fff; --fg:#1f2937; --muted:#6b7280; --card:#fff; --accent:#2563eb; --border:#e5e7eb }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:var(--bg);color:var(--fg)}
+    header{position:sticky;top:0;background:#ffffffd9;backdrop-filter:saturate(180%) blur(6px);border-bottom:1px solid var(--border);z-index:10}
+    .container{max-width:900px;margin:0 auto;padding:16px}
+    nav{display:flex;gap:8px;flex-wrap:wrap}
+    nav a{padding:8px 12px;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--fg);background:#fff}
+    nav a.router-link-active{background:var(--accent);color:#fff;border-color:var(--accent)}
+    main{padding:16px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px}
+    .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    input,select,button{background:#fff;color:var(--fg);border:1px solid var(--border);padding:8px 10px;border-radius:8px}
+    input:focus,select:focus{outline:2px solid #bfdbfe;border-color:transparent}
+    button.primary{background:var(--accent);color:#fff;border:1px solid var(--accent)}
+    .muted{color:var(--muted)}
+    code{background:#f3f4f6;border:1px solid var(--border);padding:2px 6px;border-radius:6px}
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border:1px solid var(--border);border-radius:999px;background:#fff}
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
