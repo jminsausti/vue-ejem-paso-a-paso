@@ -6,8 +6,8 @@ import { RouterLink } from 'vue-router'
 <template>
   <h1>Esto es HelloWorld</h1>
 
-<RouterLink to="/">Ir a Home</RouterLink> | 
-<RouterLink to="/alumnado">Ir a Alumnado</RouterLink> |
+<RouterLink :to="{name: 'home'}">Ir a Home</RouterLink> | 
+<RouterLink :to="{ name: 'alumnado'}">Ir a Alumnado</RouterLink> |
 <RouterLink to="/about">Ir a About</RouterLink>
 
 <RouterView />

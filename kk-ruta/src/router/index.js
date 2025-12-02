@@ -7,7 +7,7 @@ import AlumnadoIdView from '../views/AlumnadoIdView.vue';
 import DatosAlumnoView from '../views/DatosAlumnoView.vue';
 
 const routes=[
-    {path:'/',name:'home',component:HomeView},
+    {path:'/inicio',name:'home',component:HomeView},
     {path:'/about',name:'about',component:()=>import('../views/AboutView.vue')},
     {path:'/alumnado',name:'alumnado',component:AlumnadoView},
     {path:'/alumnado/:id',name:'alumnado-id',component:AlumnadoIdView},
